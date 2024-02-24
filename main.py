@@ -45,7 +45,7 @@ class Widget:
         userText = StringVar()
         userText.set('Your Virtual Assistant')
 
-        userFrame = LabelFrame(root, text='Lena', font=('Railways', 24, 'bold'))
+        userFrame = LabelFrame(root, text='Lesa', font=('Railways', 24, 'bold'))
         userFrame.pack(side='left', fill='both', expand=1)
         text = Message(userFrame, textvariable=userText, bg='black', fg='white')
         text.config(font=("Century Graphic", 15, 'bold'))
