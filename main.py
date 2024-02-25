@@ -39,7 +39,7 @@ class Widget:
 
         root = Tk()
         root.title('lesa')
-        root.geometry('520x320')
+        root.geometry('520x420')
         root.resizable(FALSE, FALSE)
 
         userText = StringVar()
@@ -51,12 +51,12 @@ class Widget:
         text.config(font=("Century Graphic", 15, 'bold'))
         text.pack(side='top', fill='both', expand=1)
 
-        btn = Button(root, text='Run', font=('railways', 10, 'bold'), bg='red', fg='white',command=self.clicked).pack(fill='x', expand=0)
-        btn2 = Button(root, text='Close', font=('railways', 10, 'bold'), bg='yellow', fg='black',
-                      command=root.destroy).pack(fill='x', expand=0)
+        img1 = ImageTk.PhotoImage(Image.open('mic_img.jpg'))
+        btn = Button(root, text='Speak', font=('railways', 10, 'bold'), bg='white', fg='white',image=img1, command=self.clicked).pack(fill='x', expand=0)
+        btn2 = Button(root, text='Close', font=('railways', 10, 'bold'), bg='yellow', fg='black', command=root.quit).pack(fill='x', expand=0)
 
-        img = ImageTk.PhotoImage(Image.open('lesa_img.jpg'))
-        panel = Label(root, image=img)
+        img2 = ImageTk.PhotoImage(Image.open('lesa_img.jpg'))
+        panel = Label(root, image=img2)
         panel.pack(side='right', fill='both', expand=0)
 
         root.mainloop()
